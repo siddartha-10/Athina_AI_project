@@ -1,4 +1,3 @@
-from openai import OpenAI
 import streamlit as st
 from dotenv import load_dotenv
 import os
@@ -59,7 +58,7 @@ st.title("Streamlit Chatbot Interface")
 
 USER_AVATAR = "👤"
 BOT_AVATAR = "🤖"
-llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.4, max_tokens=500)
+llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.4, max_tokens=500, streaming=True)
 chain = RetrievalQA.from_chain_type(
     llm = llm,
     chain_type="stuff",
