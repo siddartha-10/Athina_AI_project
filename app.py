@@ -44,6 +44,9 @@ template = """Use the context below to answer the question.
 Keep the answer concise and to the point.
 If you are unsure about the answer, just say i do not know the answer to the question do not create your own answer and make sure the answer is concise and to the point.
 Summarize the information such that main points are covered and if you think that there needs to be some more information added to the answer then you can add that information as well.
+
+if the user greets you make sure you greet them back and ask what they need help with.
+
 {context}
 
 Question: {question}
